@@ -25,9 +25,14 @@
   margin: 0;
   line-height: 1.5;
 }
+.image {
+	display: flex;
+	justify-content: center;
+}
 
 /* Grid Positions */
 .card-a{ grid-column: 1; grid-row: 1; } /* Top Left */
+.image-a{ grid-column: 2; grid-row: 1; } /*Top Right */
 .card-b{ grid-column: 2; grid-row: 2; } /* Middle Right */
 .card-c{ grid-column: 1; grid-row: 3; } /* Bottom Left */
 
@@ -37,7 +42,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
-  .card-a, .card-b, .card-c{
+  .card-a, .card-b, .card-c, .image-a{
     grid-column: 1;
     grid-row: auto;
   }
