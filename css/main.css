@@ -1,0 +1,102 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Colour Palette */
+:root{
+  --sky-1: #defdff;
+  --sky-2: #99E6FF;
+  --sun-1: #FFEAB8;
+  --sun-2: #ff9c4a;
+  --sun-3: #ff6a3d;
+  --ink: #11222a;
+  --card: rgba(255, 255, 255, 0.80);
+  --nav: rgba(12, 33, 46, 0.72);
+  --navText: #ffffff;
+}
+
+/* Global */
+html {
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  color: var(--ink);
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--sky-1), var(--sky-2), var(--sun-1));
+}
+
+/* Banner + Title Header */
+.top-wrap{
+  width: 70%;
+  max-width: 65rem;
+  margin: 0.5rem auto 1rem;
+}
+.banner{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.site-title{
+  font-family: Oswald, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  color: var(--navText);
+  background: var(--nav);
+  border-radius: 0 0 1rem 1rem;
+}
+
+/* Navbar (same width as banner) */
+.nav-wrap{
+  width: 70%;
+  max-width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.55rem 0.75rem;
+  background: var(--nav);
+  border-radius: 0.5rem;
+}
+.nav-left, .nav-right{
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+/* In-site Links */
+.nav-link{
+  color: var(--navText);
+  text-decoration: none;
+  padding: 0.45rem 0.65rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+.nav-link:hover{
+  background: rgba(255, 255, 255, 0.14);
+}
+.is-active{
+  background: rgba(255, 255, 255, 0.18);
+}
+/* Chirotouch Link */
+.nav-ct{
+  background: var(--sun-1);
+  color: #1a0e08;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+.nav-ct:hover{
+  background: var(--sun-3);
+}
+
+/* Mobile Viewing */
+@media (max-width: 860px){
+  .top-wrap, .nav-wrap{ width: 90%; }
+  .content-wrap{ width: 90%; }
+  .banner{ height: 220px; }
+  .site-title{ font-size: 1.7rem; }
+}
